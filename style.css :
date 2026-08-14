@@ -1,160 +1,252 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 
 body{
 
-background:#000;
-overflow:hidden;
+    background:linear-gradient(
+        135deg,
+        #ffcc00,
+        #ff6600,
+        #8a2be2,
+        #0066ff
+    );
+
+    min-height:100vh;
+    color:white;
 
 }
 
 
 
-.top{
+/* Barre du haut */
 
-position:fixed;
-top:0;
-width:100%;
-padding:20px;
-text-align:center;
+header{
 
-color:white;
-font-size:25px;
-font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-z-index:10;
+    padding:20px;
 
-background:linear-gradient(
-90deg,
-#001f3f,
-#ffd700
-);
+    background:rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+header h1{
+
+    font-size:30px;
+
+    color:white;
 
 }
 
 
 
-.tiktok{
+button{
 
-height:100vh;
-overflow-y:scroll;
-scroll-snap-type:y mandatory;
+    border:none;
 
-}
+    padding:12px 25px;
 
+    border-radius:30px;
 
+    background:white;
 
-.video-card{
+    color:#8a2be2;
 
-height:100vh;
-position:relative;
+    font-weight:bold;
 
-scroll-snap-align:start;
-
-}
-
-
-
-.video-card video{
-
-width:100%;
-height:100%;
-
-object-fit:cover;
+    cursor:pointer;
 
 }
 
 
 
-.info{
 
-position:absolute;
 
-bottom:120px;
-left:20px;
+/* Page accueil */
 
-color:white;
+.hero{
 
-max-width:70%;
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+
+.hero h2{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+
+}
+
+
+.start{
+
+    margin-top:25px;
+
+    background:#ffd700;
+
+    color:#111;
 
 }
 
 
 
-.info h2{
+/* Titres */
 
-font-size:24px;
+.title{
 
-}
-
-
-
-.info p{
-
-font-size:18px;
-margin-top:10px;
+    margin:20px;
 
 }
 
 
 
-.actions{
+/* Stories */
 
-position:absolute;
+.stories{
 
-right:20px;
-bottom:150px;
+    display:flex;
 
-display:flex;
-flex-direction:column;
-gap:20px;
+    gap:20px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+}
+
+
+.stories div{
+
+    min-width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        45deg,
+        #ff0055,
+        #ffcc00
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    border:4px solid white;
 
 }
 
 
 
-.actions button{
 
-background:rgba(255,255,255,0.2);
 
-border:none;
+/* Reels */
 
-color:white;
+.reels{
 
-font-size:18px;
+    display:flex;
 
-border-radius:50%;
+    gap:20px;
 
-width:70px;
-height:70px;
+    padding:20px;
+
+    overflow-x:auto;
 
 }
 
 
 
-.bottom{
+.card{
 
-position:fixed;
+    min-width:220px;
 
-bottom:0;
+    height:330px;
 
-width:100%;
+    background:
 
-display:flex;
+    linear-gradient(
+        180deg,
+        #222,
+        #000
+    );
 
-justify-content:space-around;
 
-padding:15px;
+    border-radius:25px;
 
-background:#111;
+    display:flex;
 
-color:white;
+    flex-direction:column;
 
-font-size:30px;
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:45px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.3);
+
+}
+
+
+.card p{
+
+    font-size:16px;
+
+    margin:15px;
+
+}
+
+
+
+
+/* Menu bas */
+
+footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
+
+    padding:18px;
+
+    text-align:center;
+
+
+    background:rgba(0,0,0,.6);
+
+    font-size:16px;
 
 }
